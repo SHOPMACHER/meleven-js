@@ -1,0 +1,10 @@
+# IntelliJ
+.idea
+*.iml
+
+# NodeJS
+node_modules
+
+# Project
+lib
+coverage
