@@ -2,7 +2,7 @@
 import * as errors from './errors';
 import type { MelevenParameter } from './types';
 
-const MELEVEN_REGEX = /(.*?\.meleven\.de\/out)\/(.*?)\/(?:(.*?)\/)?(.*)/gs;
+const MELEVEN_REGEX = /(.*?\.meleven\.de\/out)\/(.*?)\/(?:(.*?)\/)?(.*)/g;
 
 /**
  * Creates a parameter string from an array of meleven parameters.
