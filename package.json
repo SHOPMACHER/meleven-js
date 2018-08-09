@@ -1,6 +1,6 @@
 {
   "name": "@shopmacher/meleven",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "JavaScript utils for meleven by SHOPMACHER",
   "main": "lib/meleven.js",
   "scripts": {
@@ -22,7 +22,12 @@
     ],
     "testURL": "http://localhost"
   },
-  "keywords": ["SHOPMACHER", "meleven", "images", "manipulation"],
+  "keywords": [
+    "SHOPMACHER",
+    "meleven",
+    "images",
+    "manipulation"
+  ],
   "author": {
     "name": "Rico Herwig",
     "email": "r.herwig@shopmacher.de"
