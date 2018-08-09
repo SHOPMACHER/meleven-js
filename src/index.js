@@ -78,3 +78,20 @@ export const resize = (url: string, width: number, height: number): string => {
         }
     ]);
 };
+
+export const crop = (url: string, width: number, height: number): string => {
+    if (!url) {
+        throw new TypeError(errors.NO_URL);
+    }
+
+    if (!width || !height) {
+        throw new TypeError(errors.NO_DIMENSIONS);
+    }
+
+    return replaceParameters(url, [
+        {
+            command: 'o_crop',
+            options: [`w_${width}`, `h_${height}`]
+        }
+    ]);
+};
