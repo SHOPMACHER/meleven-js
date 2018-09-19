@@ -62,36 +62,56 @@ const replaceParameters = (
  * @param width Desired width
  * @param height Desired height
  */
-export const resize = (url: string, width: number, height: number): string => {
+export const resize = (url: string, width?: number, height?: number): string => {
     if (!url) {
         throw new TypeError(errors.NO_URL);
     }
 
-    if (!width || !height) {
+    const options = [];
+
+    if (width) {
+        options.push(`w_${width}`);
+    }
+
+    if (height) {
+        options.push(`h_${height}`);
+    }
+
+    if (!options.length) {
         throw new TypeError(errors.NO_DIMENSIONS);
     }
 
     return replaceParameters(url, [
         {
             command: 'o_resize',
-            options: [`w_${width}`, `h_${height}`]
+            options
         }
     ]);
 };
 
-export const crop = (url: string, width: number, height: number): string => {
+export const crop = (url: string, width?: number, height?: number): string => {
     if (!url) {
         throw new TypeError(errors.NO_URL);
     }
 
-    if (!width || !height) {
+    const options = [];
+
+    if (width) {
+        options.push(`w_${width}`);
+    }
+
+    if (height) {
+        options.push(`h_${height}`);
+    }
+
+    if (!options.length) {
         throw new TypeError(errors.NO_DIMENSIONS);
     }
 
     return replaceParameters(url, [
         {
             command: 'o_crop',
-            options: [`w_${width}`, `h_${height}`]
+            options
         }
     ]);
 };

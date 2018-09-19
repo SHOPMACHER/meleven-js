@@ -1,6 +1,6 @@
 {
   "name": "@shopmacher/meleven",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "JavaScript utils for meleven by SHOPMACHER",
   "main": "lib/meleven.js",
   "scripts": {
