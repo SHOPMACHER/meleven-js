@@ -61,8 +61,14 @@ const replaceParameters = (
  * @param url meleven image URL
  * @param width Desired width
  * @param height Desired height
+ * @param limit True, if limit parameter should be added
  */
-export const resize = (url: string, width?: number, height?: number): string => {
+export const resize = (
+    url: string,
+    width?: number,
+    height?: number,
+    limit?: boolean = false
+): string => {
     if (!url) {
         throw new TypeError(errors.NO_URL);
     }
@@ -75,6 +81,10 @@ export const resize = (url: string, width?: number, height?: number): string => 
 
     if (height) {
         options.push(`h_${height}`);
+    }
+
+    if (limit) {
+        options.push('m_limit');
     }
 
     if (!options.length) {
